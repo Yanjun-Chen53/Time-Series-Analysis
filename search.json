@@ -1,5 +1,47 @@
 [
   {
+    "objectID": "source.html",
+    "href": "source.html",
+    "title": "Data Souces",
+    "section": "",
+    "text": "The International Energy Agency (IEA) provides comprehensive, high-quality datasets on global energy production and consumption. Specifically, their renewable energy statistics track solar, wind, hydro, and bioenergy generation across different countries and regions. This dataset enables analysis of seasonality, structural growth, and geographic distribution of renewable adoption over time. The data is primarily available in annual and monthly time-series formats and is widely used in policy and academic research. For this project, we will focus on renewable generation from 1990 to the present. Data can be accessed through the IEA Data Browser"
+  },
+  {
+    "objectID": "source.html#data-source-1-international-energy-agency-iea",
+    "href": "source.html#data-source-1-international-energy-agency-iea",
+    "title": "Data Souces",
+    "section": "",
+    "text": "The International Energy Agency (IEA) provides comprehensive, high-quality datasets on global energy production and consumption. Specifically, their renewable energy statistics track solar, wind, hydro, and bioenergy generation across different countries and regions. This dataset enables analysis of seasonality, structural growth, and geographic distribution of renewable adoption over time. The data is primarily available in annual and monthly time-series formats and is widely used in policy and academic research. For this project, we will focus on renewable generation from 1990 to the present. Data can be accessed through the IEA Data Browser"
+  },
+  {
+    "objectID": "source.html#data-source-2-u.s.-energy-information-administration-eia",
+    "href": "source.html#data-source-2-u.s.-energy-information-administration-eia",
+    "title": "Data Souces",
+    "section": "Data Source 2 – U.S. Energy Information Administration (EIA)",
+    "text": "Data Source 2 – U.S. Energy Information Administration (EIA)\n\n\n\n\n\nThe U.S. Energy Information Administration (EIA) publishes official statistics on global energy markets, including fossil fuel consumption, production, and pricing. This dataset includes historical oil prices (e.g., Brent crude), natural gas benchmarks, and coal usage, which provide insight into the decline of fossil fuels and volatility in energy markets. The data is updated regularly and made available via the EIA Open Data API, which allows time-series extraction of daily, monthly, and annual series. For this project, fossil fuel consumption and pricing trends from 1980 onward will be analyzed to compare against renewable energy adoption."
+  },
+  {
+    "objectID": "source.html#data-source-3-yahoo-finance",
+    "href": "source.html#data-source-3-yahoo-finance",
+    "title": "Data Souces",
+    "section": "Data Source 3 – Yahoo Finance",
+    "text": "Data Source 3 – Yahoo Finance\n\n\n\n\n\nYahoo Finance provides historical financial market data, including stock prices, indices, and exchange rates. For this project, we will collect stock price information for major clean energy companies (e.g., NextEra Energy, Tesla, Ørsted, Enphase) and fossil fuel companies (e.g., ExxonMobil, Chevron). This allows us to compare market valuation trends and volatility between renewable and traditional energy firms. We will also track clean energy ETFs (e.g., ICLN, TAN) to measure sector-level performance. You can find the data at Yahoo Finance"
+  },
+  {
+    "objectID": "source.html#data-source-4-federal-reserve-economic-data-fred",
+    "href": "source.html#data-source-4-federal-reserve-economic-data-fred",
+    "title": "Data Souces",
+    "section": "Data Source 4 – Federal Reserve Economic Data (FRED)",
+    "text": "Data Source 4 – Federal Reserve Economic Data (FRED)\n\n\n\n\n\nFRED, maintained by the Federal Reserve Bank of St. Louis, provides macroeconomic time-series data such as energy consumption, electricity generation, and commodity prices. For this project, we will extract U.S. time-series on renewable electricity production, natural gas prices, and West Texas Intermediate (WTI) crude oil prices. This dataset will be used to study energy price cycles, structural breaks, and relationships between fossil fuel prices and renewable adoption. You can find the data at FRED API"
+  },
+  {
+    "objectID": "source.html#data-source-5-world-bank-carbon-pricing-dashboard",
+    "href": "source.html#data-source-5-world-bank-carbon-pricing-dashboard",
+    "title": "Data Souces",
+    "section": "Data Source 5 – World Bank Carbon Pricing Dashboard",
+    "text": "Data Source 5 – World Bank Carbon Pricing Dashboard\n\n\n\n\n\nThe World Bank Carbon Pricing Dashboard provides global data on carbon taxes and emissions trading systems. These time-series are valuable for analyzing policy shocks and their impact on renewable adoption and energy investment flows. For example, we can test whether countries that introduced carbon pricing mechanisms show faster growth in renewable energy capacity. Data is freely available from the World Bank."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Time Series Analysis",
@@ -12,5 +54,75 @@
     "title": "Time Series Analysis",
     "section": "",
     "text": "A time series is any sequence of measurements taken at regular, equally spaced intervals—seconds, minutes, hours, days, months, quarters, or years. Common examples include weather (daily temperature or rainfall), financial markets (daily stock prices or returns), industry indicators (monthly production or sales), electricity demand, traffic counts, and hospital admissions. In time-series analysis we study how these values evolve: their level, trend, seasonal or calendar patterns (e.g., weekdays vs. weekends, holiday effects), cycles, and anomalies. Typical goals are to describe behavior clearly, forecast future values, and quantify the impact of events or policies.\nBecause observations are ordered in time, nearby points tend to be correlated (autocorrelation). This violates the independent-and-identically-distributed assumption behind many standard statistical methods, so naïve cross-sectional tools often mislead. Time-series work must explicitly handle dependence, trend, and seasonality—for example by differencing, seasonal adjustment, and models that use lagged values and errors (e.g., ARIMA/SARIMA, ARIMAX/SARIMAX with external drivers, VAR for multiple series, state-space/ETS, or GARCH when volatility changes over time). Analysts also watch for structural breaks (e.g., policy shifts, COVID), outliers, and missing periods, and they evaluate models with time-aware validation (rolling or blocked splits) rather than random shuffles."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "Yanjun Chen (Jenny) is a graduate student in the Data Science and Analytics program at Georgetown University. She comes from Zhengjiang, China. She took her undergraduate degree at the Chinese University of Hong Kong, Shenzhen, majoring in data science and big data technology."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About Me",
+    "section": "",
+    "text": "Yanjun Chen (Jenny) is a graduate student in the Data Science and Analytics program at Georgetown University. She comes from Zhengjiang, China. She took her undergraduate degree at the Chinese University of Hong Kong, Shenzhen, majoring in data science and big data technology."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Me",
+    "section": "Education",
+    "text": "Education\n\n2024: M.S. in Data Sicence and analytics at Georgetown University\n2020: B.S. in Data Sicence and big data technology at Chinese University of Hong Kong (Shenzhen)"
+  },
+  {
+    "objectID": "about.html#academic-interests",
+    "href": "about.html#academic-interests",
+    "title": "About Me",
+    "section": "Academic Interests",
+    "text": "Academic Interests\n\nEthics in AI and Data Privacy\nBusiness Analysis\nClimate Change Analysis"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About Me",
+    "section": "Contact",
+    "text": "Contact\n\nNet ID: yc1265\nGU Email: yc1265@georgetown.edu"
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "The world is undergoing a profound transformation in how energy is produced, consumed, and financed. Historically, global economic growth has been tightly coupled with fossil fuels such as oil, coal, and natural gas. However, mounting evidence of climate change, advances in clean technologies, and shifting government policies have accelerated the global transition toward renewable energy. This transition—often described as the “energy transition”—is reshaping markets, altering geopolitical balances, and influencing the financial system.\nFrom a data science perspective, this topic provides a unique opportunity to explore long-term structural trends alongside short-term volatility. Energy data exhibits strong seasonality (e.g., higher natural gas demand in winter, increased electricity demand during summer heat waves), as well as structural breaks (such as the 2015 Paris Agreement or the 2020 oil price crash). It also connects multiple domains: technology costs, consumer behavior, financial market reactions, and environmental policy.\nUnderstanding these dynamics is not just an academic exercise—governments, investors, and industries rely on such analyses to guide decision-making in the face of uncertainty."
+  },
+  {
+    "objectID": "introduction.html#topic-explanation",
+    "href": "introduction.html#topic-explanation",
+    "title": "Introduction",
+    "section": "",
+    "text": "The world is undergoing a profound transformation in how energy is produced, consumed, and financed. Historically, global economic growth has been tightly coupled with fossil fuels such as oil, coal, and natural gas. However, mounting evidence of climate change, advances in clean technologies, and shifting government policies have accelerated the global transition toward renewable energy. This transition—often described as the “energy transition”—is reshaping markets, altering geopolitical balances, and influencing the financial system.\nFrom a data science perspective, this topic provides a unique opportunity to explore long-term structural trends alongside short-term volatility. Energy data exhibits strong seasonality (e.g., higher natural gas demand in winter, increased electricity demand during summer heat waves), as well as structural breaks (such as the 2015 Paris Agreement or the 2020 oil price crash). It also connects multiple domains: technology costs, consumer behavior, financial market reactions, and environmental policy.\nUnderstanding these dynamics is not just an academic exercise—governments, investors, and industries rely on such analyses to guide decision-making in the face of uncertainty."
+  },
+  {
+    "objectID": "introduction.html#the-big-picture",
+    "href": "introduction.html#the-big-picture",
+    "title": "Introduction",
+    "section": "The Big Picture",
+    "text": "The Big Picture\n\n\n\n\n\nThe global shift to clean energy is one of the most significant transformations shaping the 21st-century economy, with implications spanning technology, markets, policy, and finance. This analysis will consider the following five main areas:\nRenewable Energy Growth and Seasonality: The expansion of solar, wind, and hydropower is central to the energy transition. However, their seasonal and intermittent nature introduces challenges for grid stability and demand–supply balancing. Understanding these patterns is essential to evaluating the resilience and scalability of renewable energy systems.\nFossil Fuel Decline and Market Volatility: As coal, oil, and natural gas face structural decline, markets are experiencing heightened volatility and price fluctuations. Analyzing these dynamics provides insights into the risks for energy security and the broader macroeconomic consequences of decarbonization.\nechnological Innovation (EVs and Batteries): Advances in electric vehicles, battery storage, hydrogen, and smart grids serve as key enablers of the clean energy transition. This section will examine how technological progress reduces costs, enhances efficiency, and accelerates the adoption of sustainable energy systems.\nPolicy and Regulation: The global energy transition is profoundly shaped by regulatory frameworks and government interventions. Carbon pricing, renewable portfolio standards, subsidies, and international agreements—particularly the Paris Agreement—are decisive factors in aligning national policies with global climate goals.\nGlobal Investment and Capital Flows: Financing the clean energy transition requires large-scale capital mobilization. The rise of green finance, ESG-driven strategies, and fossil fuel divestment initiatives highlights the financial sector’s pivotal role in driving systemic change. This section will investigate how capital allocation patterns influence the speed and direction of global decarbonization."
+  },
+  {
+    "objectID": "introduction.html#literature-review",
+    "href": "introduction.html#literature-review",
+    "title": "Introduction",
+    "section": "Literature Review",
+    "text": "Literature Review\nSeasonality in Renewable Energy\nPrakash et al. (2025) investigate the role of seasonal and weather-driven variation in renewable energy production, with a focus on solar and wind power. Using SARIMA and hybrid decomposition models, they show that seasonal patterns in electricity generation strongly influence short-term grid balancing and long-term planning. Their findings indicate that reliable time-series modeling of seasonality is essential for forecasting renewable output and preventing mismatches between energy supply and demand. This work highlights the importance of seasonality in renewable energy markets and supports the use of SARIMA and SARIMAX approaches in analyzing cyclical adoption patterns in our project1.\nVolatility in Fossil Fuel and Energy Finance\nNarayan and Sharma (2019) examine volatility clustering in oil and natural gas prices, applying GARCH and EGARCH models to capture periods of heightened market uncertainty. Their results demonstrate that fossil fuel prices are subject to strong regime shifts triggered by geopolitical shocks and OPEC decisions, producing spillovers in energy-related financial markets2. Similarly, Wang and Zhou (2021) find that policy announcements often induce short-lived but sharp volatility spikes in energy stock indices3. These studies underscore the need to apply GARCH-type volatility models when studying fossil fuels and renewable-related financial assets, as fluctuations in fossil prices are deeply tied to the broader energy transition.\nTechnological Change and EV Adoption\nNykvist and Nilsson (2015) analyze the long-run cost trajectory of lithium-ion batteries, documenting a steep decline that has accelerated global electric vehicle (EV) adoption4. Their study highlights a learning-curve dynamic, where technological improvements and scale economies reduce costs over time, producing a logistic diffusion pattern in EV sales. Zaino et al. (2024) extend this analysis by modeling EV adoption using ARIMAX and logistic growth models, showing that cost reductions coupled with infrastructure investment generate rapid market penetration5. Together, these studies illustrate the technological drivers of clean energy adoption and provide a foundation for modeling structural transitions in EV markets.\nPolicy Shocks and Carbon Pricing\nRafaty et al. (2022) explore the effects of climate policy interventions—such as carbon pricing and renewable energy subsidies—on investment and adoption patterns across OECD countries6. Their study finds that policy shocks often create measurable breaks in time series, with rapid increases in renewable deployment following major policy announcements. Similarly, World Bank (2023) reports demonstrate that countries implementing carbon pricing achieve more stable emissions reductions compared to those relying solely on voluntary targets7. These findings emphasize the importance of including exogenous policy dummies and interrupted time-series models to capture the role of policy in accelerating the energy transition.\nGlobal Energy Markets and Transition Risks\nBloombergNEF (2023) reviews global investment trends in renewable energy and battery storage, finding that despite rising capital flows into clean technologies, fossil fuel assets continue to dominate some regions8. Their analysis shows that currency fluctuations, commodity price swings, and investor sentiment significantly affect the pace of capital reallocation from fossil fuels to renewables. This aligns with the view that the energy transition involves both structural long-term change and short-term volatility, requiring a blend of VAR, ARFIMA, and deep learning models to forecast interconnected global markets."
+  },
+  {
+    "objectID": "introduction.html#guiding-questions",
+    "href": "introduction.html#guiding-questions",
+    "title": "Introduction",
+    "section": "Guiding Questions",
+    "text": "Guiding Questions\n\nHow have seasonal patterns in oil and natural gas demand evolved over the past decades?\nCan traditional energy price shocks (e.g., oil crises) be forecast using ARIMA or SARIMA models?\nWhat long-term growth trends can be identified in renewable energy generation capacity?\nTo what extent does renewable adoption follow exponential or logistic growth patterns?\nHow do oil price fluctuations impact the stock returns of fossil fuel companies compared to renewable firms?\nDoes renewable energy stock volatility exhibit clustering effects that can be modeled with GARCH?\nHow strongly are electric vehicle sales correlated with declining battery costs?\nWhat structural breaks (e.g., the 2015 Paris Agreement, 2020 COVID-19 shock) can be detected in energy markets?\nHow do carbon pricing policies influence CO₂ emissions reductions across regions?\nWhat predictive insights can deep learning models (e.g., LSTM) provide about renewable adoption in the next decade?\nDo renewable investments reduce dependence on fossil fuel imports, as reflected in trade and price series?\nHow do government subsidies shift the balance of energy investments in different countries?"
   }
 ]

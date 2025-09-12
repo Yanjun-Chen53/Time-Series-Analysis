@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>source</title>
+<title>Data Souces</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About Yanjun Chen</span></a>
+<span class="menu-text">About me</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./introduction.html"> 
@@ -148,17 +148,88 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-source-1-international-energy-agency-iea" id="toc-data-source-1-international-energy-agency-iea" class="nav-link active" data-scroll-target="#data-source-1-international-energy-agency-iea">Data Source 1 – International Energy Agency (IEA)</a></li>
+  <li><a href="#data-source-2-u.s.-energy-information-administration-eia" id="toc-data-source-2-u.s.-energy-information-administration-eia" class="nav-link" data-scroll-target="#data-source-2-u.s.-energy-information-administration-eia">Data Source 2 – U.S. Energy Information Administration (EIA)</a></li>
+  <li><a href="#data-source-3-yahoo-finance" id="toc-data-source-3-yahoo-finance" class="nav-link" data-scroll-target="#data-source-3-yahoo-finance">Data Source 3 – Yahoo Finance</a></li>
+  <li><a href="#data-source-4-federal-reserve-economic-data-fred" id="toc-data-source-4-federal-reserve-economic-data-fred" class="nav-link" data-scroll-target="#data-source-4-federal-reserve-economic-data-fred">Data Source 4 – Federal Reserve Economic Data (FRED)</a></li>
+  <li><a href="#data-source-5-world-bank-carbon-pricing-dashboard" id="toc-data-source-5-world-bank-carbon-pricing-dashboard" class="nav-link" data-scroll-target="#data-source-5-world-bank-carbon-pricing-dashboard">Data Source 5 – World Bank Carbon Pricing Dashboard</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Souces</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="data-source-1-international-energy-agency-iea" class="level2">
+<h2 class="anchored" data-anchor-id="data-source-1-international-energy-agency-iea">Data Source 1 – International Energy Agency (IEA)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/iea.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<p>The International Energy Agency (IEA) provides comprehensive, high-quality datasets on global energy production and consumption. Specifically, their renewable energy statistics track solar, wind, hydro, and bioenergy generation across different countries and regions. This dataset enables analysis of seasonality, structural growth, and geographic distribution of renewable adoption over time. The data is primarily available in annual and monthly time-series formats and is widely used in policy and academic research. For this project, we will focus on renewable generation from 1990 to the present. Data can be accessed through the <a href="https://www.iea.org/data-and-statistics">IEA Data Browser</a></p>
+</section>
+<section id="data-source-2-u.s.-energy-information-administration-eia" class="level2">
+<h2 class="anchored" data-anchor-id="data-source-2-u.s.-energy-information-administration-eia">Data Source 2 – U.S. Energy Information Administration (EIA)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/eia.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<p>The U.S. Energy Information Administration (EIA) publishes official statistics on global energy markets, including fossil fuel consumption, production, and pricing. This dataset includes historical oil prices (e.g., Brent crude), natural gas benchmarks, and coal usage, which provide insight into the decline of fossil fuels and volatility in energy markets. The data is updated regularly and made available via the <a href="https://www.eia.gov/opendata/">EIA Open Data API</a>, which allows time-series extraction of daily, monthly, and annual series. For this project, fossil fuel consumption and pricing trends from 1980 onward will be analyzed to compare against renewable energy adoption.</p>
+</section>
+<section id="data-source-3-yahoo-finance" class="level2">
+<h2 class="anchored" data-anchor-id="data-source-3-yahoo-finance">Data Source 3 – Yahoo Finance</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/yahoo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<p>Yahoo Finance provides historical financial market data, including stock prices, indices, and exchange rates. For this project, we will collect stock price information for major clean energy companies (e.g., NextEra Energy, Tesla, Ørsted, Enphase) and fossil fuel companies (e.g., ExxonMobil, Chevron). This allows us to compare market valuation trends and volatility between renewable and traditional energy firms. We will also track clean energy ETFs (e.g., ICLN, TAN) to measure sector-level performance. You can find the data at <a href="https://finance.yahoo.com/">Yahoo Finance</a></p>
+</section>
+<section id="data-source-4-federal-reserve-economic-data-fred" class="level2">
+<h2 class="anchored" data-anchor-id="data-source-4-federal-reserve-economic-data-fred">Data Source 4 – Federal Reserve Economic Data (FRED)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/fred.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<p>FRED, maintained by the Federal Reserve Bank of St.&nbsp;Louis, provides macroeconomic time-series data such as energy consumption, electricity generation, and commodity prices. For this project, we will extract U.S. time-series on renewable electricity production, natural gas prices, and West Texas Intermediate (WTI) crude oil prices. This dataset will be used to study energy price cycles, structural breaks, and relationships between fossil fuel prices and renewable adoption. You can find the data at <a href="https://fred.stlouisfed.org/">FRED API</a></p>
+</section>
+<section id="data-source-5-world-bank-carbon-pricing-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="data-source-5-world-bank-carbon-pricing-dashboard">Data Source 5 – World Bank Carbon Pricing Dashboard</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/bank.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<p>The World Bank Carbon Pricing Dashboard provides global data on carbon taxes and emissions trading systems. These time-series are valuable for analyzing policy shocks and their impact on renewable adoption and energy investment flows. For example, we can test whether countries that introduced carbon pricing mechanisms show faster growth in renewable energy capacity. Data is freely available from the <a href="https://carbonpricingdashboard.worldbank.org/">World Bank</a>.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
