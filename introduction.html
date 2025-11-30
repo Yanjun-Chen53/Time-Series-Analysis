@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction</title>
+<title>Energy Transition: A Time Series Perspective</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -185,7 +185,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">Energy Transition: A Time Series Perspective</h1>
 </div>
 
 
@@ -216,40 +216,37 @@ div.csl-indent {
 </figure>
 </div>
 <p>The global shift to clean energy is one of the most significant transformations shaping the 21st-century economy, with implications spanning technology, markets, policy, and finance. This analysis will consider the following five main areas:</p>
-<p><strong>Renewable Energy Growth and Seasonality:</strong> The expansion of solar, wind, and hydropower is central to the energy transition. However, their seasonal and intermittent nature introduces challenges for grid stability and demand–supply balancing. Understanding these patterns is essential to evaluating the resilience and scalability of renewable energy systems.</p>
-<p><strong>Fossil Fuel Decline and Market Volatility:</strong> As coal, oil, and natural gas face structural decline, markets are experiencing heightened volatility and price fluctuations. Analyzing these dynamics provides insights into the risks for energy security and the broader macroeconomic consequences of decarbonization.</p>
-<p><strong>echnological Innovation (EVs and Batteries):</strong> Advances in electric vehicles, battery storage, hydrogen, and smart grids serve as key enablers of the clean energy transition. This section will examine how technological progress reduces costs, enhances efficiency, and accelerates the adoption of sustainable energy systems.</p>
-<p><strong>Policy and Regulation:</strong> The global energy transition is profoundly shaped by regulatory frameworks and government interventions. Carbon pricing, renewable portfolio standards, subsidies, and international agreements—particularly the Paris Agreement—are decisive factors in aligning national policies with global climate goals.</p>
-<p><strong>Global Investment and Capital Flows:</strong> Financing the clean energy transition requires large-scale capital mobilization. The rise of green finance, ESG-driven strategies, and fossil fuel divestment initiatives highlights the financial sector’s pivotal role in driving systemic change. This section will investigate how capital allocation patterns influence the speed and direction of global decarbonization.</p>
+<p><strong>Evolution and Seasonality of Power Generation MixExplanation:</strong> This theme examines how the global and U.S. electricity generation mix has evolved over time, focusing on the relative rise of renewable sources—particularly wind and solar—against the decline of fossil fuels such as coal and natural gas. The analysis uses time-series models (ARIMA/SARIMA) to capture both long-term structural trends and recurring seasonal patterns in generation data.</p>
+<p><strong>Price Linkages Across Fossil Fuels and Energy Equities:</strong> This theme explores how fossil fuel prices (WTI crude oil, Henry Hub natural gas) interact with financial market indicators such as the Energy ETF (XLE) and the Clean Energy ETF (ICLE/ICLN). Vector autoregression (VAR) and ARIMAX models are used to identify short-run and long-run linkages, Granger causality, and potential substitution effects between traditional and renewable sectors.</p>
+<p><strong>Volatility and Risk Spillovers in Energy and Financial Markets</strong> This component investigates the dynamic volatility interactions among commodities (WTI, HH), sectoral ETFs (XLE, ICLE), and the market-wide Volatility Index (VIX). GARCH-type and VAR-GARCH models quantify volatility clustering, persistence, and cross-market spillovers that reveal systemic risk channels during transition shocks.</p>
+<p><strong>Substitution and Decarbonization Dynamics in Power Systems:</strong> This theme studies the interdependence between renewable and fossil-fuel generation—whether increases in wind and solar output correspond to reductions in coal and gas use. A multivariate VAR or VECM framework captures substitution relationships and structural responses to carbon-pricing or policy interventions.</p>
 </section>
 <section id="literature-review" class="level2">
 <h2 class="anchored" data-anchor-id="literature-review"><strong>Literature Review</strong></h2>
-<p><strong>Seasonality in Renewable Energy</strong></p>
-<p>Prakash et al.&nbsp;(2025) investigate the role of seasonal and weather-driven variation in renewable energy production, with a focus on solar and wind power. Using SARIMA and hybrid decomposition models, they show that seasonal patterns in electricity generation strongly influence short-term grid balancing and long-term planning. Their findings indicate that reliable time-series modeling of seasonality is essential for forecasting renewable output and preventing mismatches between energy supply and demand. This work highlights the importance of seasonality in renewable energy markets and supports the use of SARIMA and SARIMAX approaches in analyzing cyclical adoption patterns in our project<span class="citation" data-cites="prakash2025"><sup><a href="#ref-prakash2025" role="doc-biblioref">1</a></sup></span>.</p>
-<p><strong>Volatility in Fossil Fuel and Energy Finance</strong></p>
-<p>Narayan and Sharma (2019) examine volatility clustering in oil and natural gas prices, applying GARCH and EGARCH models to capture periods of heightened market uncertainty. Their results demonstrate that fossil fuel prices are subject to strong regime shifts triggered by geopolitical shocks and OPEC decisions, producing spillovers in energy-related financial markets<span class="citation" data-cites="narayan2019"><sup><a href="#ref-narayan2019" role="doc-biblioref">2</a></sup></span>. Similarly, Wang and Zhou (2021) find that policy announcements often induce short-lived but sharp volatility spikes in energy stock indices<span class="citation" data-cites="wang2021"><sup><a href="#ref-wang2021" role="doc-biblioref">3</a></sup></span>. These studies underscore the need to apply GARCH-type volatility models when studying fossil fuels and renewable-related financial assets, as fluctuations in fossil prices are deeply tied to the broader energy transition.</p>
-<p><strong>Technological Change and EV Adoption</strong></p>
-<p>Nykvist and Nilsson (2015) analyze the long-run cost trajectory of lithium-ion batteries, documenting a steep decline that has accelerated global electric vehicle (EV) adoption<span class="citation" data-cites="nykvist2015"><sup><a href="#ref-nykvist2015" role="doc-biblioref">4</a></sup></span>. Their study highlights a learning-curve dynamic, where technological improvements and scale economies reduce costs over time, producing a logistic diffusion pattern in EV sales. Zaino et al.&nbsp;(2024) extend this analysis by modeling EV adoption using ARIMAX and logistic growth models, showing that cost reductions coupled with infrastructure investment generate rapid market penetration<span class="citation" data-cites="zaino2024"><sup><a href="#ref-zaino2024" role="doc-biblioref">5</a></sup></span>. Together, these studies illustrate the technological drivers of clean energy adoption and provide a foundation for modeling structural transitions in EV markets.</p>
-<p><strong>Policy Shocks and Carbon Pricing</strong></p>
-<p>Rafaty et al.&nbsp;(2022) explore the effects of climate policy interventions—such as carbon pricing and renewable energy subsidies—on investment and adoption patterns across OECD countries<span class="citation" data-cites="rafaty2022"><sup><a href="#ref-rafaty2022" role="doc-biblioref">6</a></sup></span>. Their study finds that policy shocks often create measurable breaks in time series, with rapid increases in renewable deployment following major policy announcements. Similarly, World Bank (2023) reports demonstrate that countries implementing carbon pricing achieve more stable emissions reductions compared to those relying solely on voluntary targets<span class="citation" data-cites="worldbank2023"><sup><a href="#ref-worldbank2023" role="doc-biblioref">7</a></sup></span>. These findings emphasize the importance of including exogenous policy dummies and interrupted time-series models to capture the role of policy in accelerating the energy transition.</p>
-<p><strong>Global Energy Markets and Transition Risks</strong></p>
-<p>BloombergNEF (2023) reviews global investment trends in renewable energy and battery storage, finding that despite rising capital flows into clean technologies, fossil fuel assets continue to dominate some regions<span class="citation" data-cites="bnef2023"><sup><a href="#ref-bnef2023" role="doc-biblioref">8</a></sup></span>. Their analysis shows that currency fluctuations, commodity price swings, and investor sentiment significantly affect the pace of capital reallocation from fossil fuels to renewables. This aligns with the view that the energy transition involves both structural long-term change and short-term volatility, requiring a blend of VAR, ARFIMA, and deep learning models to forecast interconnected global markets.</p>
+<p><strong>Evolution and Seasonality of Power Generation MixExplanation</strong></p>
+<p>Research on renewable generation consistently highlights the dual importance of structural capacity growth and meteorological drivers. Reports from major energy agencies show that wind and solar have become the dominant sources of new generation capacity, with global trends documented extensively in BloombergNEF’s Energy Transition Investment Trends<span class="citation" data-cites="bnef2023"><sup><a href="#ref-bnef2023" role="doc-biblioref">1</a></sup></span>, the IEA Renewables Outlook<span class="citation" data-cites="iea2023"><sup><a href="#ref-iea2023" role="doc-biblioref">2</a></sup></span>, and the Ember Global Electricity Review<span class="citation" data-cites="ember2024"><sup><a href="#ref-ember2024" role="doc-biblioref">3</a></sup></span>. Academic work reinforces these patterns: renewable output reflects long-run technological expansion as well as predictable seasonal cycles. Studies in energy-economics literature demonstrate that SARIMA-type models remain robust baselines for understanding periodicity and structural growth when high-resolution irradiance data are unavailable. This aligns with empirical evidence showing that renewable generation follows strong annual seasonality driven by daylight variation and weather, while long-term increases reflect sustained installation of solar and wind resources.</p>
+<p><strong>Price Linkages Across Fossil Fuels and Energy Equities</strong></p>
+<p>The relationship between fossil-fuel prices and energy-related equities is well documented. Classic work by Henriques and Sadorsky finds that oil price movements affect alternative-energy stock performance through risk-transmission and substitution channels<span class="citation" data-cites="henriques2008"><sup><a href="#ref-henriques2008" role="doc-biblioref">4</a></sup></span>. Additional evidence from Broadstock et al.&nbsp;shows that commodity shocks propagate into sectoral equity markets, with distinct dynamics between traditional and renewable energy companies<span class="citation" data-cites="broadstock2012"><sup><a href="#ref-broadstock2012" role="doc-biblioref">5</a></sup></span>. More recent global studies highlight increased integration between green finance and clean-energy stocks, particularly after 2020, driven by policy tightening and ESG capital flows<span class="citation" data-cites="zaremba2023"><sup><a href="#ref-zaremba2023" role="doc-biblioref">6</a></sup></span>. VAR-based analyses consistently reveal strong short-run causality among WTI, natural gas prices, and both XLE and clean-energy ETFs, reinforcing the appropriateness of multivariate time-series models for capturing energy-finance linkages.</p>
+<p><strong>Volatility and Risk Spillovers in Energy and Financial Markets</strong></p>
+<p>Volatility spillovers across energy and financial markets have been extensively examined using GARCH-type and DCC models. Empirical studies show significant bidirectional risk transmission between fossil commodities and clean-energy stocks, with spillovers intensifying during periods of uncertainty<span class="citation" data-cites="mensi2019"><sup><a href="#ref-mensi2019" role="doc-biblioref">7</a></sup></span>. Dynamic-correlation research confirms that oil, gas, and renewable-energy equities exhibit time-varying co-movements that strengthen during crises such as the 2020 pandemic or geopolitical price shocks<span class="citation" data-cites="reboredo2020"><sup><a href="#ref-reboredo2020" role="doc-biblioref">8</a></sup></span>. These findings support incorporating VIX as a measure of market-wide risk aversion and justify using multivariate volatility models to capture clustering, persistence, and cross-market contagion effects within the energy transition context.</p>
+<p><strong>Substitution and Decarbonization Dynamics in Power Systems</strong></p>
+<p>The substitution dynamics between renewable and fossil-fuel generation are a central focus in the decarbonization literature. Evidence from the U.S. shows that increases in wind and solar generation reduce coal output and, in some cases, natural-gas dispatch—although the magnitude varies by region and policy structure. Fabrizio, Rose, and Wolfram find that renewables measurably displace coal generation in U.S. power markets<span class="citation" data-cites="fabrizio2017"><sup><a href="#ref-fabrizio2017" role="doc-biblioref">9</a></sup></span>. Complementary work by Fell and Linn demonstrates that renewable penetration affects electricity prices, emissions, and fossil-fuel output through both market and policy channels<span class="citation" data-cites="fell2022"><sup><a href="#ref-fell2022" role="doc-biblioref">10</a></sup></span>. Cross-country VAR analyses further show that renewable shocks produce persistent negative responses in coal and gas generation, confirming long-run substitution dynamics consistent with the energy-transition narrative<span class="citation" data-cites="newbery2018 schwarz2021"><sup><a href="#ref-newbery2018" role="doc-biblioref">11</a>,<a href="#ref-schwarz2021" role="doc-biblioref">12</a></sup></span>.</p>
 </section>
 <section id="guiding-questions" class="level2">
 <h2 class="anchored" data-anchor-id="guiding-questions"><strong>Guiding Questions</strong></h2>
 <ol type="1">
-<li>How have seasonal patterns in oil and natural gas demand evolved over the past decades?</li>
-<li>Can traditional energy price shocks (e.g., oil crises) be forecast using ARIMA or SARIMA models?</li>
-<li>What long-term growth trends can be identified in renewable energy generation capacity?</li>
-<li>To what extent does renewable adoption follow exponential or logistic growth patterns?</li>
-<li>How do oil price fluctuations impact the stock returns of fossil fuel companies compared to renewable firms?</li>
-<li>Does renewable energy stock volatility exhibit clustering effects that can be modeled with GARCH?</li>
-<li>How strongly are electric vehicle sales correlated with declining battery costs?</li>
-<li>What structural breaks (e.g., the 2015 Paris Agreement, 2020 COVID-19 shock) can be detected in energy markets?</li>
-<li>How do carbon pricing policies influence CO₂ emissions reductions across regions?</li>
-<li>What predictive insights can deep learning models (e.g., LSTM) provide about renewable adoption in the next decade?</li>
-<li>Do renewable investments reduce dependence on fossil fuel imports, as reflected in trade and price series?</li>
-<li>How do government subsidies shift the balance of energy investments in different countries?</li>
+<li>How has the generation share of renewables changed relative to coal and gas since 2000?</li>
+<li>Which energy sources show the strongest seasonality, and has that seasonality intensified or weakened over time?</li>
+<li>When controlling for trend and seasonality, are there structural breaks corresponding to policy shifts (e.g., 2015 Paris Agreement, 2020 COVID-19 shock)?</li>
+<li>What are the best-fit seasonal models (SARIMA vs.&nbsp;Fourier-based) for different generation types?</li>
+<li>How do shocks in fossil fuel prices transmit to renewable-energy equity performance?</li>
+<li>ave the price linkages changed in strength or direction after 2020?</li>
+<li>Is there evidence of cointegration between fossil energy and clean-energy financial markets? Are volatility shocks from fossil markets transmitted to clean-energy equities?</li>
+<li>Do spillovers exhibit asymmetric behavior during price surges versus declines?</li>
+<li>How stable are volatility dynamics before and after major policy or geopolitical shocks?</li>
+<li>Are the substitution effects symmetric across fuels (gas vs.&nbsp;coal)?</li>
+<li>How do these dynamics change around major carbon-pricing or subsidy-policy events?</li>
+<li>Does renewable growth contribute to lower overall generation volatility or merely shift it across sources?</li>
 </ol>
 
 
@@ -257,29 +254,41 @@ div.csl-indent {
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-prakash2025" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Prakash, O., Kumar, A. &amp; Singh, R. <a href="https://doi.org/10.1016/j.apenergy.2025.122078">Seasonal time series models for solar and wind forecasting: A comparative analysis</a>. <em>Applied Energy</em> <strong>356</strong>, 122078 (2025).</div>
-</div>
-<div id="ref-narayan2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">Narayan, P. K. &amp; Sharma, S. S. <a href="https://doi.org/10.1016/j.eneco.2019.02.009">Oil price volatility and economic growth: Evidence from the GARCH-MIDAS model</a>. <em>Energy Economics</em> <strong>80</strong>, 743–752 (2019).</div>
-</div>
-<div id="ref-wang2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Wang, Y. &amp; Zhou, H. <a href="https://doi.org/10.1016/j.enpol.2021.112422">Policy shocks and volatility in energy stock markets: Evidence from GARCH models</a>. <em>Energy Policy</em> <strong>156</strong>, 112422 (2021).</div>
-</div>
-<div id="ref-nykvist2015" class="csl-entry" role="listitem">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">Nykvist, B. &amp; Nilsson, M. <a href="https://doi.org/10.1038/nclimate2564">Rapidly falling costs of battery packs for electric vehicles</a>. <em>Nature Climate Change</em> <strong>5</strong>, 329–332 (2015).</div>
-</div>
-<div id="ref-zaino2024" class="csl-entry" role="listitem">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">Zaino, A., Martin, R. &amp; Ketterer, J. <a href="https://doi.org/10.1016/j.eneco.2024.106765">Modeling electric vehicle adoption: A time series approach</a>. <em>Energy Economics</em> <strong>123</strong>, 106765 (2024).</div>
-</div>
-<div id="ref-rafaty2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">Rafaty, R., Dolphin, G. &amp; Pretis, F. <a href="https://doi.org/10.1038/s41558-022-01293-1">Carbon pricing and the elasticity of emissions: Evidence from OECD countries</a>. <em>Nature Climate Change</em> <strong>12</strong>, 380–386 (2022).</div>
-</div>
-<div id="ref-worldbank2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">Bank, W. <em>State and trends of carbon pricing 2023</em>. <a href="https://openknowledge.worldbank.org/handle/10986/39796">https://openknowledge.worldbank.org/handle/10986/39796</a> (2023).</div>
-</div>
 <div id="ref-bnef2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">BloombergNEF. <em>Energy transition investment trends 2023</em>. <a href="https://about.bnef.com">https://about.bnef.com</a> (2023).</div>
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">BloombergNEF. <em>Energy transition investment trends 2023</em>. <a href="https://about.bnef.com">https://about.bnef.com</a> (2023).</div>
+</div>
+<div id="ref-iea2023" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Agency, I. E. <a href="https://www.iea.org/reports/renewables-2023">Renewables 2023: Analysis and forecast to 2028</a>. (2023).</div>
+</div>
+<div id="ref-ember2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Climate, E. <em>Global electricity review 2024</em>. <a href="https://ember-climate.org">https://ember-climate.org</a> (2024).</div>
+</div>
+<div id="ref-henriques2008" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Henriques, I. &amp; Sadorsky, P. Oil prices and the stock prices of alternative energy companies. <em>Energy Economics</em> <strong>30</strong>, 998–1010 (2008).</div>
+</div>
+<div id="ref-broadstock2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Broadstock, D. C., Cao, H. &amp; Zhang, D. Oil shocks and their impact on energy related stocks: Evidence from china. <em>Energy Economics</em> <strong>34</strong>, 1888–1895 (2012).</div>
+</div>
+<div id="ref-zaremba2023" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Zaremba, A., Umar, Z. &amp; Mikutowski, M. Green finance and clean energy stocks: Global evidence. <em>Journal of Cleaner Production</em> <strong>385</strong>, 135673 (2023).</div>
+</div>
+<div id="ref-mensi2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Mensi, W., Rehman, M. &amp; Shahzad, S. J. H. Volatility spillovers between energy markets and clean energy stocks. <em>Energy</em> <strong>171</strong>, 89–100 (2019).</div>
+</div>
+<div id="ref-reboredo2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Reboredo, J., Ugolini, A. &amp; Aiube, F. Dynamic conditional correlations between oil, gas and clean energy. <em>Energy Economics</em> <strong>87</strong>, 104709 (2020).</div>
+</div>
+<div id="ref-fabrizio2017" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Fabrizio, K., Rose, N. &amp; Wolfram, C. Do renewables displace coal? Evidence from u.s. Electricity generation. <em>American Economic Journal: Economic Policy</em> <strong>9</strong>, 32–60 (2017).</div>
+</div>
+<div id="ref-fell2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Fell, H. &amp; Linn, J. The effect of renewable energy on electricity prices, generation, and emissions. <em>Journal of Environmental Economics and Management</em> <strong>111</strong>, 102577 (2022).</div>
+</div>
+<div id="ref-newbery2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Newbery, D. The value of variable renewables: Impact on markets and grids. <em>Energy Policy</em> <strong>113</strong>, 427–436 (2018).</div>
+</div>
+<div id="ref-schwarz2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Schwarz, G., Tuerk, A. &amp; Resch, G. Substitution dynamics between renewables and fossil fuels: A VAR analysis. <em>Energy Studies Review</em> <strong>28</strong>, (2021).</div>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
