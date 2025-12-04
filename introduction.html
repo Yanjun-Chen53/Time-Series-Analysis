@@ -216,37 +216,47 @@ div.csl-indent {
 </figure>
 </div>
 <p>The global shift to clean energy is one of the most significant transformations shaping the 21st-century economy, with implications spanning technology, markets, policy, and finance. This analysis will consider the following five main areas:</p>
-<p><strong>Evolution and Seasonality of Power Generation MixExplanation:</strong> This theme examines how the global and U.S. electricity generation mix has evolved over time, focusing on the relative rise of renewable sources—particularly wind and solar—against the decline of fossil fuels such as coal and natural gas. The analysis uses time-series models (ARIMA/SARIMA) to capture both long-term structural trends and recurring seasonal patterns in generation data.</p>
-<p><strong>Price Linkages Across Fossil Fuels and Energy Equities:</strong> This theme explores how fossil fuel prices (WTI crude oil, Henry Hub natural gas) interact with financial market indicators such as the Energy ETF (XLE) and the Clean Energy ETF (ICLE/ICLN). Vector autoregression (VAR) and ARIMAX models are used to identify short-run and long-run linkages, Granger causality, and potential substitution effects between traditional and renewable sectors.</p>
-<p><strong>Volatility and Risk Spillovers in Energy and Financial Markets</strong> This component investigates the dynamic volatility interactions among commodities (WTI, HH), sectoral ETFs (XLE, ICLE), and the market-wide Volatility Index (VIX). GARCH-type and VAR-GARCH models quantify volatility clustering, persistence, and cross-market spillovers that reveal systemic risk channels during transition shocks.</p>
-<p><strong>Substitution and Decarbonization Dynamics in Power Systems:</strong> This theme studies the interdependence between renewable and fossil-fuel generation—whether increases in wind and solar output correspond to reductions in coal and gas use. A multivariate VAR or VECM framework captures substitution relationships and structural responses to carbon-pricing or policy interventions.</p>
+<p><strong>Long-Run Evolution of Power Generation Mix:</strong> This theme examines how the composition of electricity generation—wind, solar, natural gas, coal, nuclear, and hydro—has shifted over time. It focuses on long-term decarbonization trends, structural breakpoints, and the growing role of renewables.</p>
+<p><strong>Seasonality &amp; Climate Drivers:</strong> This theme investigates seasonal and climatic patterns in different generation sources and how temperature, irradiance, wind patterns, and hydrology influence renewable and fossil-fuel generation.</p>
+<p><strong>Linkages and Causality in Energy Prices:</strong> This theme analyzes dynamic interactions among WTI crude oil, Henry Hub natural gas, and energy-related financial indices, focusing on short-run spillovers, long-run cointegration, and causal relationships.</p>
+<p><strong>Financial Dynamics of Clean Energy Assets (Return &amp; Volatility Behavior):</strong> This theme focuses on price behavior, return dynamics, volatility clustering, and risk spillovers in clean energy ETFs (ICLE/ICLN), especially relative to traditional energy ETFs such as XLE.</p>
+<p><strong>Dynamic Interactions within Multi-Energy Systems (Inter-Energy Dynamics):</strong> This theme analyzes how different energy sources interact in a multi-energy system—whether renewables displace fossil fuels, whether natural gas complements variable renewables, and how shocks propagate through the generation network.</p>
 </section>
 <section id="literature-review" class="level2">
 <h2 class="anchored" data-anchor-id="literature-review"><strong>Literature Review</strong></h2>
-<p><strong>Evolution and Seasonality of Power Generation MixExplanation</strong></p>
-<p>Research on renewable generation consistently highlights the dual importance of structural capacity growth and meteorological drivers. Reports from major energy agencies show that wind and solar have become the dominant sources of new generation capacity, with global trends documented extensively in BloombergNEF’s Energy Transition Investment Trends<span class="citation" data-cites="bnef2023"><sup><a href="#ref-bnef2023" role="doc-biblioref">1</a></sup></span>, the IEA Renewables Outlook<span class="citation" data-cites="iea2023"><sup><a href="#ref-iea2023" role="doc-biblioref">2</a></sup></span>, and the Ember Global Electricity Review<span class="citation" data-cites="ember2024"><sup><a href="#ref-ember2024" role="doc-biblioref">3</a></sup></span>. Academic work reinforces these patterns: renewable output reflects long-run technological expansion as well as predictable seasonal cycles. Studies in energy-economics literature demonstrate that SARIMA-type models remain robust baselines for understanding periodicity and structural growth when high-resolution irradiance data are unavailable. This aligns with empirical evidence showing that renewable generation follows strong annual seasonality driven by daylight variation and weather, while long-term increases reflect sustained installation of solar and wind resources.</p>
-<p><strong>Price Linkages Across Fossil Fuels and Energy Equities</strong></p>
-<p>The relationship between fossil-fuel prices and energy-related equities is well documented. Classic work by Henriques and Sadorsky finds that oil price movements affect alternative-energy stock performance through risk-transmission and substitution channels<span class="citation" data-cites="henriques2008"><sup><a href="#ref-henriques2008" role="doc-biblioref">4</a></sup></span>. Additional evidence from Broadstock et al.&nbsp;shows that commodity shocks propagate into sectoral equity markets, with distinct dynamics between traditional and renewable energy companies<span class="citation" data-cites="broadstock2012"><sup><a href="#ref-broadstock2012" role="doc-biblioref">5</a></sup></span>. More recent global studies highlight increased integration between green finance and clean-energy stocks, particularly after 2020, driven by policy tightening and ESG capital flows<span class="citation" data-cites="zaremba2023"><sup><a href="#ref-zaremba2023" role="doc-biblioref">6</a></sup></span>. VAR-based analyses consistently reveal strong short-run causality among WTI, natural gas prices, and both XLE and clean-energy ETFs, reinforcing the appropriateness of multivariate time-series models for capturing energy-finance linkages.</p>
-<p><strong>Volatility and Risk Spillovers in Energy and Financial Markets</strong></p>
-<p>Volatility spillovers across energy and financial markets have been extensively examined using GARCH-type and DCC models. Empirical studies show significant bidirectional risk transmission between fossil commodities and clean-energy stocks, with spillovers intensifying during periods of uncertainty<span class="citation" data-cites="mensi2019"><sup><a href="#ref-mensi2019" role="doc-biblioref">7</a></sup></span>. Dynamic-correlation research confirms that oil, gas, and renewable-energy equities exhibit time-varying co-movements that strengthen during crises such as the 2020 pandemic or geopolitical price shocks<span class="citation" data-cites="reboredo2020"><sup><a href="#ref-reboredo2020" role="doc-biblioref">8</a></sup></span>. These findings support incorporating VIX as a measure of market-wide risk aversion and justify using multivariate volatility models to capture clustering, persistence, and cross-market contagion effects within the energy transition context.</p>
-<p><strong>Substitution and Decarbonization Dynamics in Power Systems</strong></p>
-<p>The substitution dynamics between renewable and fossil-fuel generation are a central focus in the decarbonization literature. Evidence from the U.S. shows that increases in wind and solar generation reduce coal output and, in some cases, natural-gas dispatch—although the magnitude varies by region and policy structure. Fabrizio, Rose, and Wolfram find that renewables measurably displace coal generation in U.S. power markets<span class="citation" data-cites="fabrizio2017"><sup><a href="#ref-fabrizio2017" role="doc-biblioref">9</a></sup></span>. Complementary work by Fell and Linn demonstrates that renewable penetration affects electricity prices, emissions, and fossil-fuel output through both market and policy channels<span class="citation" data-cites="fell2022"><sup><a href="#ref-fell2022" role="doc-biblioref">10</a></sup></span>. Cross-country VAR analyses further show that renewable shocks produce persistent negative responses in coal and gas generation, confirming long-run substitution dynamics consistent with the energy-transition narrative<span class="citation" data-cites="newbery2018 schwarz2021"><sup><a href="#ref-newbery2018" role="doc-biblioref">11</a>,<a href="#ref-schwarz2021" role="doc-biblioref">12</a></sup></span>.</p>
+<p><strong>Long-Run Evolution of Power Generation Mix</strong></p>
+<p>Global studies show that the power sector is undergoing consistent structural decarbonization. Large-scale industry reports, such as BP’s Statistical Review<span class="citation" data-cites="bp2023"><sup><a href="#ref-bp2023" role="doc-biblioref">1</a></sup></span> and the IEA’s World Energy Outlook<span class="citation" data-cites="iea2022"><sup><a href="#ref-iea2022" role="doc-biblioref">2</a></sup></span>, document that renewable generation is expanding faster than fossil fuels.</p>
+<p>Academic literature emphasizes that declining technology costs and supportive policies play a major role in accelerating renewable adoption<span class="citation" data-cites="aklin2018"><sup><a href="#ref-aklin2018" role="doc-biblioref">3</a></sup></span>. BloombergNEF identifies several “cost-parity tipping points,” where renewables become cheaper than fossil alternatives<span class="citation" data-cites="bnef2023"><sup><a href="#ref-bnef2023" role="doc-biblioref">4</a></sup></span>, reinforcing long-run structural shifts.</p>
+<p><strong>Seasonality and Climate-Driven Dynamics of Energy Supply</strong></p>
+<p>Solar power’s strong dependence on irradiance and seasonal temperature cycles has been widely documented<span class="citation" data-cites="gilbert2016"><sup><a href="#ref-gilbert2016" role="doc-biblioref">5</a></sup></span>. Wind power output is shaped by atmospheric circulation patterns, which vary by season and region<span class="citation" data-cites="pryor2020"><sup><a href="#ref-pryor2020" role="doc-biblioref">6</a></sup></span>.</p>
+<p>Natural gas generation typically peaks during winter months due to heating demand, as shown in U.S. EIA research<span class="citation" data-cites="eia2021"><sup><a href="#ref-eia2021" role="doc-biblioref">7</a></sup></span>. Hydropower output depends on precipitation and seasonal water availability<span class="citation" data-cites="hanasaki2018"><sup><a href="#ref-hanasaki2018" role="doc-biblioref"><strong>hanasaki2018?</strong></a></sup></span>, and climate variability is increasingly recognized as a source of short-run volatility in renewable generation across multiple studies.</p>
+<p><strong>Linkages and Causality in Energy Prices</strong></p>
+<p>Oil price shocks affect broader energy markets through production costs and macroeconomic channels<span class="citation" data-cites="hamilton2009"><sup><a href="#ref-hamilton2009" role="doc-biblioref">8</a></sup></span>.</p>
+<p>Studies show mixed evidence of integration between oil and natural gas: some periods show price comovement<span class="citation" data-cites="bachmeier2006"><sup><a href="#ref-bachmeier2006" role="doc-biblioref">9</a></sup></span>, while others suggest partial decoupling depending on market structure<span class="citation" data-cites="kilian2014"><sup><a href="#ref-kilian2014" role="doc-biblioref">10</a></sup></span>.</p>
+<p>Financial literature further indicates strong causal links between energy prices and sector-level equity indices<span class="citation" data-cites="narayan2010"><sup><a href="#ref-narayan2010" role="doc-biblioref">11</a></sup></span>, with volatility intensifying during crises, as observed in connectedness research<span class="citation" data-cites="diebold2014"><sup><a href="#ref-diebold2014" role="doc-biblioref">12</a></sup></span>.</p>
+<p><strong>Financial Dynamics of Clean Energy Assets</strong></p>
+<p>Clean energy equities are highly sensitive to fluctuations in oil prices, as shown in early work on alternative energy stocks<span class="citation" data-cites="henriques2008"><sup><a href="#ref-henriques2008" role="doc-biblioref">13</a></sup></span>.</p>
+<p>Clean energy assets display strong volatility clustering, making GARCH-family models appropriate for risk analysis<span class="citation" data-cites="sadorsky2012"><sup><a href="#ref-sadorsky2012" role="doc-biblioref">14</a></sup></span>.</p>
+<p>More recent work suggests these assets are gradually transitioning from being predominantly policy-driven to more market-driven<span class="citation" data-cites="pham2019"><sup><a href="#ref-pham2019" role="doc-biblioref">15</a></sup></span>, yet they remain exposed to macro-energy shocks.</p>
+<p>Cross-asset spillovers—especially during periods of market stress—can be analyzed through the connectedness framework proposed in<span class="citation" data-cites="diebold2014"><sup><a href="#ref-diebold2014" role="doc-biblioref">12</a></sup></span>.</p>
+<p><strong>Dynamic Interactions within Multi-Energy Systems</strong></p>
+<p>Renewable energy expansion often displaces fossil-fuel generation, consistent with evidence of long-term “crowding out” effects<span class="citation" data-cites="newbery2018"><sup><a href="#ref-newbery2018" role="doc-biblioref">16</a></sup></span>.</p>
+<p>Natural gas plays a critical role as a flexible generation source that compensates for wind and solar intermittency<span class="citation" data-cites="stern2012"><sup><a href="#ref-stern2012" role="doc-biblioref">17</a></sup></span>.</p>
+<p>Recent system-level analyses highlight that shocks can propagate across coal, gas, and renewable sources through substitution and complementarity channels<span class="citation" data-cites="marques2020"><sup><a href="#ref-marques2020" role="doc-biblioref">18</a></sup></span>.</p>
+<p>These dynamic interactions underscore the importance of VAR and structural modeling approaches in understanding modern electricity systems.</p>
 </section>
 <section id="guiding-questions" class="level2">
 <h2 class="anchored" data-anchor-id="guiding-questions"><strong>Guiding Questions</strong></h2>
 <ol type="1">
-<li>How has the generation share of renewables changed relative to coal and gas since 2000?</li>
-<li>Which energy sources show the strongest seasonality, and has that seasonality intensified or weakened over time?</li>
-<li>When controlling for trend and seasonality, are there structural breaks corresponding to policy shifts (e.g., 2015 Paris Agreement, 2020 COVID-19 shock)?</li>
-<li>What are the best-fit seasonal models (SARIMA vs.&nbsp;Fourier-based) for different generation types?</li>
-<li>How do shocks in fossil fuel prices transmit to renewable-energy equity performance?</li>
-<li>ave the price linkages changed in strength or direction after 2020?</li>
-<li>Is there evidence of cointegration between fossil energy and clean-energy financial markets? Are volatility shocks from fossil markets transmitted to clean-energy equities?</li>
-<li>Do spillovers exhibit asymmetric behavior during price surges versus declines?</li>
-<li>How stable are volatility dynamics before and after major policy or geopolitical shocks?</li>
-<li>Are the substitution effects symmetric across fuels (gas vs.&nbsp;coal)?</li>
-<li>How do these dynamics change around major carbon-pricing or subsidy-policy events?</li>
-<li>Does renewable growth contribute to lower overall generation volatility or merely shift it across sources?</li>
+<li>Has the power generation structure (wind, solar, gas, coal, nuclear, hydro) consistently shifted towards clean energy over the past decade? How rapidly has this shift occurred?</li>
+<li>Do clean energy sources such as wind, solar, and hydropower exhibit significant and stable seasonal patterns? Is this seasonality changing?</li>
+<li>How much does weather (temperature or HDD/CDD) affect solar, wind, and natural gas power generation? Are there any lag effects?</li>
+<li>Is there a significant correlation between oil prices (WTI) and natural gas prices (Henry Hub)? Which leads the other?</li>
+<li>Does natural gas price (HH) significantly affect natural gas power generation? And does it exhibit different elasticities in winter and summer?</li>
+<li>Do changes in fossil fuel prices “squeeze out” or “promote” renewable energy generation (such as solar/wind)?</li>
+<li>Is there a spillover effect in returns and volatility between clean energy ETFs (ICLE/ICLN) and traditional energy ETFs (XLE)? 8. Do clean energy ETFs (ICLE/ICLN) exhibit significant volatility clustering (GARCH characteristics)? Are their risk levels higher than those of traditional energy ETFs?</li>
+<li>Are there substitution relationships within multi-energy systems (wind/solar/coal/gas/nuclear/hydro)? For example, will wind and solar power displace coal gas?</li>
+<li>How do exogenous shocks in the energy market (surges in oil prices, abnormal temperatures) propagate among different energy sources through the VAR system?</li>
 </ol>
 
 
@@ -254,41 +264,59 @@ div.csl-indent {
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-bp2023" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">BP. <em>Statistical review of world energy 2023</em>. <a href="https://www.bp.com">https://www.bp.com</a> (2023).</div>
+</div>
+<div id="ref-iea2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Agency, I. E. <em>World energy outlook 2022</em>. <a href="https://www.iea.org">https://www.iea.org</a> (2022).</div>
+</div>
+<div id="ref-aklin2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Aklin, M. &amp; Urpelainen, J. <em>Renewables: The politics of a global energy transition</em>. (MIT Press, 2018).</div>
+</div>
 <div id="ref-bnef2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">BloombergNEF. <em>Energy transition investment trends 2023</em>. <a href="https://about.bnef.com">https://about.bnef.com</a> (2023).</div>
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">BloombergNEF. <em>Energy transition investment trends 2023</em>. <a href="https://about.bnef.com">https://about.bnef.com</a> (2023).</div>
 </div>
-<div id="ref-iea2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">Agency, I. E. <a href="https://www.iea.org/reports/renewables-2023">Renewables 2023: Analysis and forecast to 2028</a>. (2023).</div>
+<div id="ref-gilbert2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Gilbert, A. &amp; James, T. Solar resource variability and electricity generation implications. <em>Renewable Energy</em> <strong>95</strong>, 72–84 (2016).</div>
 </div>
-<div id="ref-ember2024" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Climate, E. <em>Global electricity review 2024</em>. <a href="https://ember-climate.org">https://ember-climate.org</a> (2024).</div>
+<div id="ref-pryor2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Pryor, S. C. &amp; Barthelmie, R. J. Climate change impacts on wind energy. <em>Nature Reviews Earth &amp; Environment</em> <strong>1</strong>, 627–643 (2020).</div>
+</div>
+<div id="ref-eia2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Administration, U. S. E. I. <em>Short-term energy outlook</em>. <a href="https://www.eia.gov/outlooks/steo/">https://www.eia.gov/outlooks/steo/</a> (2021).</div>
+</div>
+<div id="ref-hamilton2009" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Hamilton, J. D. Causes and consequences of the oil shock of 2007–08. <em>Brookings Papers on Economic Activity</em> 215–261 (2009).</div>
+</div>
+<div id="ref-bachmeier2006" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Bachmeier, L. J. &amp; Griffin, J. M. Testing for market integration: Crude oil, coal, and natural gas. <em>The Energy Journal</em> <strong>27</strong>, 55–71 (2006).</div>
+</div>
+<div id="ref-kilian2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Kilian, L. Oil price shocks: Causes and consequences. <em>Annual Review of Resource Economics</em> <strong>6</strong>, 133–154 (2014).</div>
+</div>
+<div id="ref-narayan2010" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Narayan, P. K. &amp; Narayan, S. Modelling the impact of oil prices on the stock returns of clean energy and technology companies. <em>Energy Policy</em> <strong>38</strong>, 6617–6622 (2010).</div>
+</div>
+<div id="ref-diebold2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Diebold, F. X. &amp; Yilmaz, K. On the network topology of variance decompositions: Measuring the connectedness of financial firms. <em>Journal of Econometrics</em> <strong>182</strong>, 119–134 (2014).</div>
 </div>
 <div id="ref-henriques2008" class="csl-entry" role="listitem">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">Henriques, I. &amp; Sadorsky, P. Oil prices and the stock prices of alternative energy companies. <em>Energy Economics</em> <strong>30</strong>, 998–1010 (2008).</div>
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Henriques, I. &amp; Sadorsky, P. Oil prices and the stock prices of alternative energy companies. <em>Energy Economics</em> <strong>30</strong>, 998–1010 (2008).</div>
 </div>
-<div id="ref-broadstock2012" class="csl-entry" role="listitem">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">Broadstock, D. C., Cao, H. &amp; Zhang, D. Oil shocks and their impact on energy related stocks: Evidence from china. <em>Energy Economics</em> <strong>34</strong>, 1888–1895 (2012).</div>
+<div id="ref-sadorsky2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Sadorsky, P. Modelling renewable energy company risk: A GARCH approach. <em>Energy Policy</em> <strong>40</strong>, 71–82 (2012).</div>
 </div>
-<div id="ref-zaremba2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">Zaremba, A., Umar, Z. &amp; Mikutowski, M. Green finance and clean energy stocks: Global evidence. <em>Journal of Cleaner Production</em> <strong>385</strong>, 135673 (2023).</div>
-</div>
-<div id="ref-mensi2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">Mensi, W., Rehman, M. &amp; Shahzad, S. J. H. Volatility spillovers between energy markets and clean energy stocks. <em>Energy</em> <strong>171</strong>, 89–100 (2019).</div>
-</div>
-<div id="ref-reboredo2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">Reboredo, J., Ugolini, A. &amp; Aiube, F. Dynamic conditional correlations between oil, gas and clean energy. <em>Energy Economics</em> <strong>87</strong>, 104709 (2020).</div>
-</div>
-<div id="ref-fabrizio2017" class="csl-entry" role="listitem">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">Fabrizio, K., Rose, N. &amp; Wolfram, C. Do renewables displace coal? Evidence from u.s. Electricity generation. <em>American Economic Journal: Economic Policy</em> <strong>9</strong>, 32–60 (2017).</div>
-</div>
-<div id="ref-fell2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline">Fell, H. &amp; Linn, J. The effect of renewable energy on electricity prices, generation, and emissions. <em>Journal of Environmental Economics and Management</em> <strong>111</strong>, 102577 (2022).</div>
+<div id="ref-pham2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Pham, L. The transition of renewable energy stocks from policy-driven to market-driven. <em>Journal of Sustainable Finance &amp; Investment</em> <strong>9</strong>, 235–252 (2019).</div>
 </div>
 <div id="ref-newbery2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline">Newbery, D. The value of variable renewables: Impact on markets and grids. <em>Energy Policy</em> <strong>113</strong>, 427–436 (2018).</div>
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">Newbery, D. The energy transition in europe: Overview of the markets, economics, and policies. <em>Energy Policy</em> <strong>123</strong>, 226–234 (2018).</div>
 </div>
-<div id="ref-schwarz2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline">Schwarz, G., Tuerk, A. &amp; Resch, G. Substitution dynamics between renewables and fossil fuels: A VAR analysis. <em>Energy Studies Review</em> <strong>28</strong>, (2021).</div>
+<div id="ref-stern2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">17. </div><div class="csl-right-inline">Stern, J. The role of natural gas in supporting renewable energy. <em>Oxford Institute for Energy Studies Working Paper</em> (2012).</div>
+</div>
+<div id="ref-marques2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">18. </div><div class="csl-right-inline">Marques, A. &amp; Fuinhas, J. Energy transition and the dynamics of renewable and fossil power. <em>Energy</em> <strong>202</strong>, 117–135 (2020).</div>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
