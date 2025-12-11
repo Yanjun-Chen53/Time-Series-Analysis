@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>conclusion</title>
+<title>Conslusion</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -152,11 +152,70 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Conslusion</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This project aims to understand the true nature of the global energy transition from a systemic perspective, and how this transition manifests itself in electricity production, fuel prices, and financial markets. We analyze five key aspects: power generation structure, seasonal patterns, price linkages, financial asset behavior, and multi-energy interactions, thereby constructing a comprehensive framework that spans both physical and financial systems. The research objective is not only to describe trends but also to explore the economic forces and structural changes driving the evolution of the energy system.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/big.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<p>We first analyzed historical power generation data and found that coal is experiencing a long-term structural decline, while wind and solar energy are undergoing rapid expansion, accelerating significantly after 2015. Natural gas has grown steadily and has become dominant in recent years, while hydropower and nuclear power have remained relatively stable. The SARIMA model further revealed the seasonal characteristics of each energy source: wind energy exhibits strong seasonality and is highly predictable, while solar energy is affected by both seasonality and weather fluctuations; coal, although declining, still retains seasonal patterns; and natural gas shows a very pronounced peak in winter demand. These patterns collectively form the seasonal basis of modern energy supply.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<p>Subsequently, we used the ARIMAX model to explore the driving factors of solar power generation. The results showed that temperature and radiation have a significant impact on power generation, but extreme high temperatures inhibit efficiency; simultaneously, rising natural gas and oil prices increase the relative competitiveness of solar energy. This demonstrates that the development of renewable energy depends not only on climatic conditions but also on market incentives. In the financial dimension, the analysis of the clean energy ETF (ICLN) revealed a completely different dynamic: natural gas prices were the only consistently significant predictor variable, while oil and traditional energy indices (XLE) did not play a decisive role. This indicates that clean energy stocks have formed a financial ecosystem relatively independent of fossil fuels, exhibiting higher volatility and greater susceptibility to uncertainty.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<p>Using the VAR model, we further revealed the interrelationships of multi-energy systems. The results showed that wind and solar energy often exhibit complementary or synchronous changes, while the relationship between fossil fuels and renewable energy is more like a substitution. The common upward trend of natural gas and renewable energy reflects the long-term effects of infrastructure expansion and market demand. This illustrates that modern energy systems do not operate in isolation but are a complex network of competition, interaction, and adjustment.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<p>In the volatility analysis, the GARCH model showed significant volatility clustering in the clean energy financial market, with significant shocks during the 2008 financial crisis and the 2020 pandemic and oil price collapse. This result highlights that the volatility of the physical energy system is far weaker than that of the financial system, and clean energy investments carry greater uncertainty in the real market.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<p>To improve forecasting performance, we introduced deep learning models. Across all models, the simple RNN delivers the best performance, achieving the lowest RMSE and the most stable forecasts. GRU performs moderately well, capturing seasonal timing but underestimating amplitude. LSTM performs the worst: its higher complexity leads to instability, overfitting, and rapidly diverging multi-step predictions. Regularization improves RNN and GRU stability but is insufficient for LSTM. Compared with traditional ARIMA models, deep learning—especially RNN—captures nonlinear seasonality more effectively. Overall, the RNN is the most appropriate model for this dataset, balancing accuracy, stability, and robustness for short- to medium-term energy forecasting.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<p>Overall, this project demonstrates that energy transition is a systemic process spanning physical, economic, and financial dimensions. Traditional models (such as SARIMA and ARIMAX) effectively explain trends and driving forces, VAR models help understand the structural relationships between different energy sources, and GARCH models reveal the dynamic changes in market risk. Each method has its strengths, and their combined use allows for the construction of an analytical framework that is both structurally rigorous and closely aligned with reality.</p>
+<p>By combining insights from energy economics with time series modeling, this project provides important insights into understanding the evolution of energy systems. For policymakers, investors, and researchers alike, mastering this cross-system perspective is crucial for addressing future challenges related to energy structure adjustments, market volatility, and climate change.</p>
 
 
 
